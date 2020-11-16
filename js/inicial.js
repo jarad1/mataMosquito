@@ -4,7 +4,12 @@ function iniciarJogo() {
         alert('Selecione um nível para iniciar o jogo')
         return false
     }
-    window.location.href = 'app.html?' + nivel
+    window.location.href = 'app.html?' + nivel + tempoJogo()
+}
+
+function tempoJogo() {
+    var tempo = document.getElementById('range').value
+    return tempo
 }
 
 function infosJogo() {

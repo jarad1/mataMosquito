@@ -8,19 +8,42 @@ var criaMosquitoTempo = 1500
 
 var nivel = window.location.search
 nivel = nivel.replace('?','')
-if(nivel === 'normal') {
+if(nivel === 'normal1' || nivel === 'normal2' || nivel === 'normal3' || nivel === 'normal4' || nivel === 'normal5' ) {
+    tempo = nivel.replace('normal','')
     var criaMosquitoTempo = 1500
 
-}else if (nivel === 'dificil') {
+}else if (nivel === 'dificil1' || nivel === 'dificil2' || nivel === 'dificil3' || nivel === 'dificil4' || nivel === 'dificil5'  ) {
+    tempo = nivel.replace('dificil','')
+    tempo = tempo == 1 ? 15 : tempo
+    tempo = tempo == 2 ? 20 : tempo
+    tempo = tempo == 3 ? 25 : tempo
+    tempo = tempo == 4 ? 30 : tempo
+    tempo = tempo == 5 ? 35 : tempo
     var criaMosquitoTempo = 1000
 
-}else if (nivel === 'chucknorris') {
+
+}else if (nivel === 'chucknorris1' || nivel === 'chucknorris2' || nivel === 'chucknorris3' || nivel === 'chucknorris4' || nivel === 'chucknorris5') {
+    tempo = nivel.replace('chucknorris','')
+    tempo = tempo == 1 ? 15 : tempo
+    tempo = tempo == 2 ? 20 : tempo
+    tempo = tempo == 3 ? 25 : tempo
+    tempo = tempo == 4 ? 30 : tempo
+    tempo = tempo == 5 ? 35 : tempo
     var criaMosquitoTempo = 750
 
-}else if (nivel === 'facil') {
+}else if (nivel === 'facil1' || nivel === 'facil2' || nivel === 'facil3' || nivel === 'facil4' || nivel === 'facil5') {
+    tempo = nivel.replace('facil','')
+    tempo = tempo == 1 ? 15 : tempo
+    tempo = tempo == 2 ? 20 : tempo
+    tempo = tempo == 3 ? 25 : tempo
+    tempo = tempo == 4 ? 30 : tempo
+    tempo = tempo == 5 ? 35 : tempo
+    console.log(tempo)
     var criaMosquitoTempo = 2500
 
 }
+
+
 
 
 function ajustaTamanhoPalcoJogo() {
@@ -32,7 +55,7 @@ function ajustaTamanhoPalcoJogo() {
 ajustaTamanhoPalcoJogo()
 
 var cronometro = setInterval(function() {
-    tempo--
+    
     if(tempo < 0){
         clearInterval(cronometro)
         clearInterval(criaMosca)
@@ -41,6 +64,7 @@ var cronometro = setInterval(function() {
         document.getElementById('cronometro').innerHTML = tempo
         
     }
+    tempo--
 },1000)
 
 var criaMosca =  setInterval(function() {
