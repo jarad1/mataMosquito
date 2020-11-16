@@ -94,7 +94,8 @@ function posicaoRandomica() {
             vidas++
         }
              
-    }if(document.getElementById('mosquito3')) {
+    }
+    if(document.getElementById('mosquito3')) {
         document.getElementById('mosquito3').remove()
         if(vidas > 3) {
             window.location.href = 'fim-de-jogo.html'
