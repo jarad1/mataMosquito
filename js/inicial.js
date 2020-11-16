@@ -1,10 +1,11 @@
 function iniciarJogo() {
-    var nivel = document.getElementById('nivel').value
-    if (nivel === '' ) {
+    var nivel = (document.getElementById('nivel').value + tempoJogo() )
+    
+    if (nivel === '1' || nivel === '2' || nivel === '3'  || nivel === '4' || nivel === '5' ) {
         alert('Selecione um nível para iniciar o jogo')
         return false
     }
-    window.location.href = 'app.html?' + nivel + tempoJogo()
+    window.location.href = 'app.html?' + nivel
 }
 
 function tempoJogo() {
