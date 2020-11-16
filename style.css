@@ -87,3 +87,14 @@ div.col div#caixa {
         width: 400px;
     }
 }
+
+@media (max-width: 400px) {
+    #infos {
+        background-color: #fff;
+        box-sizing: border-box;
+        font-size: 0.8em;
+        font-weight: bold;
+        margin: auto;
+    
+    }
+}
