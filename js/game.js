@@ -1,14 +1,29 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 11
+var tempo = 15
 var img = 0
-var classI = 0
+
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?','')
+if(nivel === 'normal') {
+    var criaMosquitoTempo = 1500
+
+
+}else if (nivel === 'dificil') {
+    var criaMosquitoTempo = 1000
+
+}else if (nivel === 'chucknorris') {
+    var criaMosquitoTempo = 750
+
+}
+
 
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight
     largura = window.innerWidth
-    
 
 }
 
@@ -65,14 +80,14 @@ var criaMosca =  setInterval(function() {
             return posicaoRandomica2() 
 
     }
-}, 2000)
+}, criaMosquitoTempo)
 
 
 function posicaoRandomica() {
 
     if(document.getElementById('mosquito2')) {
         document.getElementById('mosquito2').remove()
-        if(vidas >= 3) {
+        if(vidas > 3) {
             window.location.href = 'fim-de-jogo.html'
         } else {
             document.getElementById('v' + vidas).src = './img/coracao_vazio.png'
@@ -81,7 +96,7 @@ function posicaoRandomica() {
              
     }if(document.getElementById('mosquito3')) {
         document.getElementById('mosquito3').remove()
-        if(vidas >= 3) {
+        if(vidas > 3) {
             window.location.href = 'fim-de-jogo.html'
         } 
              
@@ -131,7 +146,7 @@ function posicaoRandomica1() {
 
     if(document.getElementById('mosquito1')) {
         document.getElementById('mosquito1').remove()
-        if(vidas >= 3) {
+        if(vidas > 3) {
             window.location.href = 'fim-de-jogo.html'
         } else {
             document.getElementById('v' + vidas).src = './img/coracao_vazio.png'
@@ -141,7 +156,7 @@ function posicaoRandomica1() {
     }
     if(document.getElementById('mosquito3')) {
         document.getElementById('mosquito3').remove()
-        if(vidas >= 3) {
+        if(vidas > 3) {
             window.location.href = 'fim-de-jogo.html'
         }     
     }
@@ -190,7 +205,7 @@ function posicaoRandomica2() {
 
     if(document.getElementById('mosquito1')) {
         document.getElementById('mosquito1').remove()
-        if(vidas >= 3) {
+        if(vidas > 3) {
             window.location.href = 'fim-de-jogo.html'
         } else {
             document.getElementById('v' + vidas).src = './img/coracao_vazio.png'
@@ -199,7 +214,7 @@ function posicaoRandomica2() {
              
     }if(document.getElementById('mosquito2')) {
         document.getElementById('mosquito2').remove()
-        if(vidas >= 3) {
+        if(vidas > 3) {
             window.location.href = 'fim-de-jogo.html'
         } else {
             document.getElementById('v' + vidas).src = './img/coracao_vazio.png'
