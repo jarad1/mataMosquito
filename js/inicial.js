@@ -20,6 +20,7 @@ function infosJogo() {
     if (nivel == 'normal'){
 
         document.body.appendChild(dados)
+        document.getElementById('infos').style.background = '#fff'
         document.getElementById('infos').innerHTML = 'O <img class="mosquito1" src="./img/mosca.png" > tem de ser clicado ate o tempo de 1.5s, onde ele some da tela, para não perder um <img src="./img/coracao_cheio.png"> pois ao zerar perder o jogo <br>O <img class="mosquito1" src="./img/mosca1.png" > não pode ser clicado ate 1.5s, onde ele some da tela, para não perder um <img src="./img/coracao_cheio.png"> pois ao zerar perder o jogo <br>O <img class="mosquito1" src="./img/mosca2.png" > deve ser clicado ate 1.5s, onde ele some da tela, para ganhar um <img src="./img/coracao_cheio.png"> no lugar de um que tenha sido perdido <br>'
         console.log(dados)   
     }

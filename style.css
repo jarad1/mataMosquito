@@ -90,7 +90,7 @@ div.col div#caixa {
 
 @media (max-width: 400px) {
     #infos {
-        background-color: #fff;
+        color: #fff;
         box-sizing: border-box;
         font-size: 0.8em;
         font-weight: bold;
